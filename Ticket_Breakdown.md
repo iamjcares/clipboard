@@ -16,3 +16,41 @@ Based on the information given, break this ticket down into 2-5 individual ticke
 You will be graded on the level of detail in each ticket, the clarity of the execution plan within and between tickets, and the intelligibility of your language. You don't need to be a native English speaker, but please proof-read your work.
 
 ## Your Breakdown Here
+
+## Ticket One
+Title: Add `agent_id` to Agent's table.
+
+Time Estimate: 2hrs
+
+Implementation: 
+- Add new column agent_id to table Agents
+- agent_id will be of type varchar (depending on the custom id facilities will be providing) 
+
+Acceptance criteria:
+- agent_id should be unique, duplicates values should not be allowed
+- agent_id can be NULL
+
+## Ticket Two
+Title: Migrate Agents table 
+
+Time Estimate: 2hrs
+
+Implementation: 
+- Migrate the Agents table using the custom agent ID provided by the Facilities
+-  
+
+Acceptance criteria:
+- agent_id should be unique, no 2 agents should have same id.
+- agents with no id should remain NULL
+
+## Ticket Three
+Title: Update `generateReport` to reflect `agent_id` instead of `id`
+
+Time Estimate: 2hrs
+
+Implementation: 
+- Update the `generateReport` to show `agent_id` in the report instead of the internal `id`
+-  
+
+Acceptance criteria:
+- Agents with no ID should return their internal `id` with note, eg ##`id` to specify id is internal.
